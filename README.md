@@ -1,6 +1,6 @@
 # Reminders Bot
 
-Originall posted [here](https://reminders.preritdas.com). The read-me below includes information on how to setup the program from scratch, how to deploy it, and how to create shell shortcuts. The files in their full form are in the repository and are regularly updated when I make significant changes to the program. As such, the code below should only be used in context and as a guide for building the program.
+Originally posted [here](https://reminders.preritdas.com). The read-me below includes information on how to setup the program from scratch, how to deploy it, and how to create shell shortcuts. The files in their full form are in the repository and are regularly updated when I make significant changes to the program. As such, the code below should only be used in context and as a guide for building the program.
 
 ----
 
