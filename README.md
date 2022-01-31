@@ -249,7 +249,7 @@ with pysftp.Connection(host = 'HOSTNAMEIP', username = 'USER', password = 'verys
 This will SFTP into the server running this program, find the folder `Reminders/` for your project, the subdirectory `Data/`, and then put your `reminders.json` file from the `Data/` subdirectory in your local project folder. The structure looks like this:
 
 Local directory:
-```json
+```
 Reminders/
     main.py
     otherfiles
@@ -259,7 +259,7 @@ Reminders/
 ```
 
 Remote directory:
-```json
+```
 Reminders/
     main.py
     config.py
