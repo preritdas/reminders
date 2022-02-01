@@ -1,8 +1,7 @@
 import json, os, time
 from datetime import datetime as dt
 from texts import textMe
-
-reminded = []
+import time
 
 def getData():
     try:
@@ -49,13 +48,11 @@ def main():
         # Check for reminders
         currentTime = dt.now().strftime('%H-%M')
         if currentTime in remindersJSON and restartwait != True:
-            reminder = remindersJSON[currentTime]
-            if reminder in reminded:
-                alreadyReminded = True
-            if alreadyReminded != True:
-                print(f"Reminder: {reminder}")
-                textMe(reminder)
-                reminded.append(reminder)
+            localtime = currentTime
+            reminder = remindersJSON[localtime]
+            print(f"Reminder: {reminder}")
+            textMe(reminder)
+            time.sleep(60)
 
 if __name__ == "__main__":
     main()
