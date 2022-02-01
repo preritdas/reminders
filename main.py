@@ -3,6 +3,9 @@ from datetime import datetime as dt
 from texts import textMe
 import time
 
+alreadyReminders = []
+alreadyTimes = []
+
 def getData():
     try:
         with open('Data/reminders.json', 'r') as f:
@@ -50,9 +53,13 @@ def main():
         if currentTime in remindersJSON and restartwait != True:
             localtime = currentTime
             reminder = remindersJSON[localtime]
-            print(f"Reminder: {reminder}")
-            textMe(reminder)
-            time.sleep(60)
+            # Already reminded failsafe
+            if localtime not in alreadyTimes or reminder not in alreadyReminders:
+                print(f"Reminder: {reminder}")
+                textMe(reminder)
+                # Append to already lists
+                alreadyTimes.append(localtime)
+                alreadyReminders.append(reminder)
 
 if __name__ == "__main__":
     main()
